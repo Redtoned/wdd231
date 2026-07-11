@@ -29,7 +29,7 @@
         <circle cx="8" cy="10" r="1.6"></circle>
         <path d="M2 17l6-5 4 3 5-6 5 8"></path>
       </svg>
-      <span>Denton Chamber of Commerce</span>
+      <span>Timbuktu Chamber of Commerce</span>
     </a>
 
     <nav class="site-nav">
@@ -55,19 +55,23 @@
   </header>
 
   <main>
-    <div class="directory-heading">
-      <h1>Directory</h1>
-      <div class="view-toggle" role="group" aria-label="Choose directory view">
-        <button id="grid-view-btn" class="view-btn active" type="button">Grid</button>
-        <button id="list-view-btn" class="view-btn" type="button">List</button>
-      </div>
+    <div class="page-header">
+      <h1 class="page-title">Directory</h1>
+      <section class="view-controls" aria-label="Directory view controls">
+        <h2 class="visually-hidden">Browse the Directory</h2>
+        <div class="view-toggle" role="group" aria-label="Choose directory view">
+          <button id="grid-view-btn" class="view-btn active" type="button">Grid</button>
+          <button id="list-view-btn" class="view-btn" type="button">List</button>
+        </div>
+      </section>
     </div>
 
     <section id="directory" class="directory grid-view" aria-label="Business directory">
+      <h2 class="visually-hidden">Member Businesses</h2>
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Bamako Textiles</h2>
+          <h3>Bamako Textiles</h3>
           <p class="tag-line">Handwoven fabric &amp; tailoring</p>
         </div>
         <div class="card-body">
@@ -91,7 +95,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Sahel Coffee House</h2>
+          <h3>Sahel Coffee House</h3>
           <p class="tag-line">Locally roasted coffee</p>
         </div>
         <div class="card-body">
@@ -115,7 +119,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Niger River Outfitters</h2>
+          <h3>Niger River Outfitters</h3>
           <p class="tag-line">Guided river expeditions</p>
         </div>
         <div class="card-body">
@@ -139,7 +143,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Timbuktu Bookbinders</h2>
+          <h3>Timbuktu Bookbinders</h3>
           <p class="tag-line">Manuscript preservation &amp; binding</p>
         </div>
         <div class="card-body">
@@ -163,7 +167,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Desert Rose Bakery</h2>
+          <h3>Desert Rose Bakery</h3>
           <p class="tag-line">Fresh bread, daily</p>
         </div>
         <div class="card-body">
@@ -187,7 +191,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Azalai Trading Co.</h2>
+          <h3>Azalai Trading Co.</h3>
           <p class="tag-line">Salt &amp; caravan goods</p>
         </div>
         <div class="card-body">
@@ -211,7 +215,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Mali Tech Solutions</h2>
+          <h3>Mali Tech Solutions</h3>
           <p class="tag-line">IT support for local business</p>
         </div>
         <div class="card-body">
@@ -235,7 +239,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Griot Media Studio</h2>
+          <h3>Griot Media Studio</h3>
           <p class="tag-line">Video &amp; storytelling production</p>
         </div>
         <div class="card-body">
@@ -259,7 +263,7 @@
 
       <article class="business-card">
         <div class="card-header">
-          <h2>Sankore Legal Group</h2>
+          <h3>Sankore Legal Group</h3>
           <p class="tag-line">Small business legal counsel</p>
         </div>
         <div class="card-body">
@@ -282,11 +286,21 @@
       </article>
 
     </section>
+
+    <section class="directory-info">
+      <h2>Want to Be Listed?</h2>
+      <p>
+        Every member of the Timbuktu Chamber of Commerce receives a free listing in this
+        directory, complete with contact details and a short business tagline. If your
+        business isn't shown here yet, join the chamber to get listed and connect with
+        customers across Timbuktu.
+      </p>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-contact">
-      <p class="footer-title">Denton Chamber of Commerce</p>
+      <p class="footer-title">Timbuktu Chamber of Commerce</p>
       <p>10 Rue De La Paix</p>
       <p>Timbuktu, Mali 999</p>
       <p><a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
@@ -316,8 +330,8 @@
 
     <div class="footer-meta">
       <p>WDD231 Class Project</p>
-      <p>Caleb J. Erickson</p>
-      <p>&copy; <span id="year"></span> Denton Chamber of Commerce</p>
+      <p>Marie Martínez</p>
+      <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
       <p>Last Modification: <span id="last-modified"></span></p>
     </div>
   </footer>
