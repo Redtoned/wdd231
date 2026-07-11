@@ -14,7 +14,7 @@
   --text: #000000;         /* Text */
   --card-bg: #ffffff;
   --card-border: #d9d9d9;
-  --font-family: "Times New Roman", Times, Georgia, serif;
+  --font-family: "Tinos", "Times New Roman", Times, Georgia, serif;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: var(--secondary);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -105,12 +105,12 @@ svg {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--secondary);
-  text-decoration: none;
+  color: var(--text);
+  text-decoration: underline;
 }
 
 .site-nav a.active {
-  color: var(--primary);
+  color: var(--text);
   font-weight: bold;
 }
 
@@ -136,7 +136,7 @@ svg {
 .icon-button:hover,
 .icon-button:focus-visible {
   background-color: var(--secondary-light);
-  color: var(--secondary);
+  color: var(--text);
 }
 
 .menu-button {
@@ -179,7 +179,7 @@ main {
   padding: 0.5rem 1.5rem;
   border: 2px solid var(--secondary);
   background-color: var(--bg);
-  color: var(--secondary);
+  color: var(--text);
   cursor: pointer;
   border-radius: 4px;
 }
@@ -219,7 +219,7 @@ main {
 .card-header h2 {
   margin: 0;
   font-size: 1.1rem;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .tag-line {
@@ -259,7 +259,7 @@ main {
 
 .card-details dt {
   font-weight: bold;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .card-details dd {
@@ -330,7 +330,7 @@ main {
 /* ---------- Light mode ---------- */
 
 body[data-theme="light"] {
-  --text: #ffffff;
+  --text: #000000;
 }
 
 /* ---------- Dark mode ---------- */
