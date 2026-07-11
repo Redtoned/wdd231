@@ -1,10 +1,10 @@
 :root {
-  --primary: #7a0c0c;      /* Blood Red */
+  --primary: #7a0c0c;
   --primary-dark: #5c0909;
-  --secondary: #007fff;    /* Azure Blue */
+  --secondary: #007fff;
   --secondary-light: #e5f2ff;
-  --bg: #ffffff;           /* Background */
-  --text: #000000;         /* Text */
+  --bg: #ffffff;
+  --text: #000000;
   --card-bg: #ffffff;
   --card-border: #d9d9d9;
   --font-family: "Times New Roman", Times, Georgia, serif;
