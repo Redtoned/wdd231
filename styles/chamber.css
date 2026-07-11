@@ -6,10 +6,10 @@
    =================================================== */
 
 :root {
-  --primary: #7a0c0c;      /* Blood Red */
-  --primary-dark: #5c0909;
-  --secondary: #007fff;    /* Azure Blue */
-  --secondary-light: #e5f2ff;
+  --primary: #007fff;      /* Azure Blue */
+  --primary-dark: #005fc2;
+  --secondary: #7a0c0c;    /* Blood Red */
+  --secondary-light: #f6e0e0;
   --bg: #ffffff;           /* Background */
   --text: #000000;         /* Text */
   --card-bg: #ffffff;
@@ -327,6 +327,12 @@ main {
   text-align: center;
 }
 
+/* ---------- Light mode ---------- */
+
+body[data-theme="light"] {
+  --text: #ffffff;
+}
+
 /* ---------- Dark mode ---------- */
 
 body[data-theme="dark"] {
@@ -334,7 +340,7 @@ body[data-theme="dark"] {
   --text: #f2f2f2;
   --card-bg: #1e1e1e;
   --card-border: #3a3a3a;
-  --secondary-light: #113047;
+  --secondary-light: #3a1414;
 }
 
 body[data-theme="dark"] .site-header {
