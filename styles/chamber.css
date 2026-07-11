@@ -1,17 +1,10 @@
-/* ===================================================
-   mobile.css
-   Mobile-first base styles. Loaded on every screen size.
-   Small-screen layout rules live here with no media query;
-   desktop.css (loaded only at wider widths) overrides them.
-   =================================================== */
-
 :root {
-  --primary: #007fff;      /* Azure Blue */
-  --primary-dark: #005fc2;
-  --secondary: #7a0c0c;    /* Blood Red */
+  --primary: #002147;
+  --primary-dark: #002147;
+  --secondary: #bb133e;
   --secondary-light: #f6e0e0;
-  --bg: #ffffff;           /* Background */
-  --text: #000000;         /* Text */
+  --bg: #ffffff;
+  --text: #000000;
   --card-bg: #ffffff;
   --card-border: #d9d9d9;
   --font-family: "Tinos", "Times New Roman", Times, Georgia, serif;
@@ -49,7 +42,7 @@ svg {
   display: block;
 }
 
-/* ---------- Header ---------- */
+/* Header */
 
 .site-header {
   display: flex;
@@ -143,7 +136,7 @@ svg {
   display: inline-flex;
 }
 
-/* ---------- Page header & view toggle ---------- */
+/* Page header & view toggle */
 
 main {
   max-width: 1200px;
@@ -206,7 +199,7 @@ main {
   color: #ffffff;
 }
 
-/* ---------- Directory grid / list ---------- */
+/* Directory grid / list */
 /* Single column on mobile regardless of grid/list mode */
 
 .directory {
@@ -279,7 +272,7 @@ main {
   word-break: break-word;
 }
 
-/* ---------- Directory info section ---------- */
+/* Directory info section */
 
 .directory-info {
   margin-top: 2rem;
@@ -298,7 +291,7 @@ main {
   margin-bottom: 0;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 
 .site-footer {
   display: flex;
@@ -358,13 +351,13 @@ main {
   text-align: center;
 }
 
-/* ---------- Light mode ---------- */
+/* Light mode */
 
 body[data-theme="light"] {
   --text: #000000;
 }
 
-/* ---------- Dark mode ---------- */
+/* Dark mode */
 
 body[data-theme="dark"] {
   --bg: #121212;

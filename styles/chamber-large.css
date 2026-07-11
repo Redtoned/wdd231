@@ -1,15 +1,6 @@
-/* ===================================================
-   desktop.css
-   Loaded only at wider viewports, both via the <link media="">
-   attribute in index.html AND the @media rule below (so the
-   file is self-contained and every selector here is scoped
-   inside @media rather than repeating mobile.css's top-level
-   rules).
-   =================================================== */
-
 @media screen and (min-width: 700px) {
 
-  /* ---------- Header ---------- */
+  /* Header */
 
   .site-header {
     flex-wrap: nowrap;
@@ -42,7 +33,7 @@
     display: none;
   }
 
-  /* ---------- Page header & view toggle ---------- */
+  /* Page header & view toggle */
 
   main {
     padding: 0 2rem 3rem;
@@ -61,7 +52,7 @@
     left: 0;
   }
 
-  /* ---------- Directory grid / list ---------- */
+  /* Directory grid / list */
 
   .directory.grid-view {
     grid-template-columns: repeat(2, 1fr);
@@ -97,7 +88,7 @@
     }
   }
 
-  /* ---------- Footer ---------- */
+  /* Footer */
 
   .site-footer {
     display: grid;
