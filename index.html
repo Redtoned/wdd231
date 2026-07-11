@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Directory | Denton Chamber of Commerce</title>
+    <meta name="description"
+        content="An updated webpage for a collection of temples from around the world that I chose based off of the appearance of their architecture and the surrounding beauty." />
+    <meta name="author" content="Caleb J. Erickson" />
+
+    <link rel="stylesheet" href="chambers.css" />
+
+    <script src="chamber.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="1.5"></rect>
+                <circle cx="8" cy="10" r="1.6"></circle>
+                <path d="M2 17l6-5 4 3 5-6 5 8"></path>
+            </svg>
+            <span>Timbuktu Chamber of Commerce</span>
+        </a>
+
+        <nav class="site-nav">
+            <a href="#">Home</a>
+            <a href="#" class="active" aria-current="page">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+
+        <div class="header-controls">
+            <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 0 1 0 16z" fill="currentColor"></path>
+                </svg>
+            </button>
+            <button id="nav-toggle" class="icon-button menu-button" type="button" aria-label="Open menu"
+                aria-expanded="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="directory-heading">
+            <h1>Directory</h1>
+            <div class="view-toggle" role="group" aria-label="Choose directory view">
+                <button id="grid-view-btn" class="view-btn active" type="button">Grid</button>
+                <button id="list-view-btn" class="view-btn" type="button">List</button>
+            </div>
+        </div>
+
+        <section id="directory" class="directory grid-view" aria-label="Business directory">
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Bamako Textiles</h2>
+                    <p class="tag-line">Handwoven fabric &amp; tailoring</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>info@bamakotextiles.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1234</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>bamakotextiles.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Sahel Coffee House</h2>
+                    <p class="tag-line">Locally roasted coffee</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>hello@sahelcoffee.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1235</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>sahelcoffee.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Niger River Outfitters</h2>
+                    <p class="tag-line">Guided river expeditions</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>info@nigerriveroutfitters.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1236</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>nigerriveroutfitters.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Timbuktu Bookbinders</h2>
+                    <p class="tag-line">Manuscript preservation &amp; binding</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>info@tbbookbinders.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1237</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>tbbookbinders.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Desert Rose Bakery</h2>
+                    <p class="tag-line">Fresh bread, daily</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>orders@desertrosebakery.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1238</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>desertrosebakery.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Azalai Trading Co.</h2>
+                    <p class="tag-line">Salt &amp; caravan goods</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>sales@azalaitrading.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1239</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>azalaitrading.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Mali Tech Solutions</h2>
+                    <p class="tag-line">IT support for local business</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>support@malitechsolutions.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1240</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>malitechsolutions.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Griot Media Studio</h2>
+                    <p class="tag-line">Video &amp; storytelling production</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>hello@griotmedia.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1241</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>griotmedia.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <article class="business-card">
+                <header class="card-header">
+                    <h2>Sankore Legal Group</h2>
+                    <p class="tag-line">Small business legal counsel</p>
+                </header>
+                <div class="card-body">
+                    <div class="card-image" role="img" aria-label="Business photo placeholder"></div>
+                    <dl class="card-details">
+                        <div>
+                            <dt>Email</dt>
+                            <dd>info@sankorelegal.com</dd>
+                        </div>
+                        <div>
+                            <dt>Phone</dt>
+                            <dd>800-555-1242</dd>
+                        </div>
+                        <div>
+                            <dt>URL</dt>
+                            <dd>sankorelegal.com</dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <p class="footer-title">Timbuktu Chamber of Commerce</p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p><a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
+            <p>(223) 555-2300</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M23 12s0-3.6-.46-5.3a2.9 2.9 0 0 0-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.54.5a2.9 2.9 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.46 5.3a2.9 2.9 0 0 0 2 2c1.64.5 8.54.5 8.54.5s6.9 0 8.54-.5a2.9 2.9 0 0 0 2-2C23 15.6 23 12 23 12zM9.7 15.3V8.7l6 3.3z" />
+                </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" />
+                </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path
+                        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-3-1.83-3-1.83 0-2.1 1.4-2.1 2.9V21H9z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer-meta">
+            <p>WDD231 Class Project</p>
+            <p>Marie Martínez</p>
+            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
