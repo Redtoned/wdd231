@@ -1,0 +1,112 @@
+{
+  "members": [
+    {
+      "name": "Denton Community Market",
+      "address": "317 W Oak St, Denton, TX 76201",
+      "phone": "(940) 268-4326",
+      "url": "https://dentonmarket.org",
+      "email": "info@dentonmarket.org",
+      "image": "denton-community-market.webp",
+      "membershipLevel": 1,
+      "category": "Farmers & Art Market",
+      "yearEstablished": 2010,
+      "tagline": "A producer-only farmers and art market held every Saturday in downtown Denton, featuring local farmers, artists, food trucks, and live music."
+    },
+    {
+      "name": "Morrison Milling Company",
+      "address": "500 E Walnut St, Denton, TX 76201",
+      "phone": "(800) 531-7912",
+      "url": "https://morrisonmilling.com",
+      "email": null,
+      "image": "morrison-milling.webp",
+      "membershipLevel": 3,
+      "category": "Food Production",
+      "yearEstablished": 1886,
+      "tagline": "A historic flour and cornmeal mill, one of the last independent flour mills in Texas, known for its cornbread and baking mixes."
+    },
+    {
+      "name": "Red Team IT",
+      "address": "1220 N Elm St, Denton, TX 76201",
+      "phone": "(940) 323-9801",
+      "url": "https://redteamit.net",
+      "email": null,
+      "image": "red-team-it.webp",
+      "membershipLevel": 2,
+      "category": "IT Services & Cybersecurity",
+      "yearEstablished": 2016,
+      "tagline": "A managed IT services and cybersecurity provider serving Denton-area businesses, offering onsite support and IT consulting."
+    },
+    {
+      "name": "Denton County Brewing Company",
+      "address": "200 E McKinney St, Denton, TX 76201",
+      "phone": "(940) 435-0710",
+      "url": "https://dentoncbc.com",
+      "email": "cheers@dentoncbc.com",
+      "image": "denton-county-brewing.webp",
+      "membershipLevel": 3,
+      "category": "Brewery & Taproom",
+      "yearEstablished": 2015,
+      "tagline": "A locally owned independent craft brewery and taproom in downtown Denton offering original beers, wine, cider, and seltzers."
+    },
+    {
+      "name": "Mayday Manufacturing",
+      "address": "5900 Sherman Dr, Denton, TX 76208",
+      "phone": "(940) 898-8301",
+      "url": "https://maydaymfg.com",
+      "email": null,
+      "image": "mayday-manufacturing.webp",
+      "membershipLevel": 3,
+      "category": "Aerospace Manufacturing",
+      "yearEstablished": 1966,
+      "tagline": "An aerospace manufacturer producing precision-machined bushings, pins, sleeves, and aircraft components."
+    },
+    {
+      "name": "Painted Flower Farm, Inc.",
+      "address": "9060 Old Alton Rd, Denton, TX 76207",
+      "phone": "(940) 391-1934",
+      "url": "https://paintedflowerfarm.com",
+      "email": null,
+      "image": "painted-flower-farm.webp",
+      "membershipLevel": 1,
+      "category": "Nursery & Wholesale Grower",
+      "yearEstablished": 2003,
+      "tagline": "A nursery and wholesale grower specializing in native and drought-tolerant Texas perennials for retail and landscaping."
+    },
+    {
+      "name": "Denton Web Studios",
+      "address": "115 N Locust St, Denton, TX 76201",
+      "phone": "(940) 351-4001",
+      "url": "https://dentonwebstudios.com",
+      "email": "hello@dentonwebstudios.com",
+      "image": "denton-web-studios.webp",
+      "membershipLevel": 2,
+      "category": "Web Design & Marketing",
+      "yearEstablished": 2018,
+      "tagline": "A web design, SEO, and digital marketing agency building websites and branding for local businesses."
+    },
+    {
+      "name": "Cartwright's Ranch House",
+      "address": "116 W Oak St, Denton, TX 76201",
+      "phone": "(940) 387-7706",
+      "url": "https://cartwrightsranchhouse.com",
+      "email": null,
+      "image": "cartwrights-ranch-house.webp",
+      "membershipLevel": 1,
+      "category": "Restaurant",
+      "yearEstablished": 2013,
+      "tagline": "A homestyle American restaurant on the Denton square known for its signature chicken-fried steak with cream gravy."
+    },
+    {
+      "name": "Square 205",
+      "address": "205 W Congress St, Denton, TX 76201",
+      "phone": "(940) 323-2341",
+      "url": "https://square205.com",
+      "email": "communicate@square205.com",
+      "image": "square-205.webp",
+      "membershipLevel": 2,
+      "category": "Creative & Marketing Agency",
+      "yearEstablished": 2012,
+      "tagline": "A full-service digital creative and marketing agency offering web design, branding, and app development."
+    }
+  ]
+}
