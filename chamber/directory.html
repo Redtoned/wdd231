@@ -9,6 +9,14 @@
     content="This website showcases a Chamber of Commerce website for Denton, Texas. It is a school project in the class WDD 231." />
   <meta name="author" content="Caleb J. Erickson" />
   <link rel="icon" type="image/png" href="images/chamberofcommerce.png">
+
+  <meta property="og:title" content="Denton Chamber of Commerce – Business Directory" />
+  <meta property="og:description"
+    content="Browse the Denton Chamber of Commerce directory to find trusted local businesses, from markets and breweries to IT firms and manufacturers." />
+  <meta property="og:image" content="https://redtoned.github.io/wdd231/chamber/images/og-directory.jpg" />
+  <meta property="og:url" content="https://redtoned.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
@@ -24,12 +32,7 @@
 
   <header class="site-header">
     <a class="brand" href="index.html">
-      <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
-        aria-hidden="true">
-        <rect x="2" y="4" width="20" height="16" rx="1.5"></rect>
-        <circle cx="8" cy="10" r="1.6"></circle>
-        <path d="M2 17l6-5 4 3 5-6 5 8"></path>
-      </svg>
+      <img class="brand-icon" src="images/chamberofcommerce.png" alt="Denton Chamber of Commerce logo">
       <span>Denton Chamber of Commerce</span>
     </a>
 
@@ -67,8 +70,6 @@
       </section>
     </div>
 
-    <!-- Business cards are injected here at runtime by scripts/chamber.js,
-         which fetches data/members.json using fetch() and async/await. -->
     <section id="directory" class="directory grid-view" aria-label="Business directory">
       <h2 class="visually-hidden">Member Businesses</h2>
     </section>
