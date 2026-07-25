@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denton Chamber of Commerce | Home</title>
+  <meta name="description"
+    content="This website showcases a Chamber of Commerce website for Denton, Texas. It is a school project in the class WDD 231." />
+  <meta name="author" content="Caleb J. Erickson" />
+  <link rel="icon" type="image/png" href="images/chamberofcommerce.png">
+
+  <meta property="og:title" content="Denton Chamber of Commerce" />
+  <meta property="og:description"
+    content="View local upcoming events, the current weather, and spotlighted member businesses from the Denton Chamber of Commerce." />
+  <meta property="og:image" content="https://redtoned.github.io/wdd231/chamber/images/chamberofcommerce.png" />
+  <meta property="og:url" content="https://redtoned.github.io/wdd231/chamber/index.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <link rel="stylesheet" href="styles/chamber-large.css" />
+
+  <script src="scripts/chamber.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="images/chamberofcommerce.png" alt="Denton Chamber of Commerce logo">
+      <span>Denton Chamber of Commerce</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+
+    <div class="header-controls">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 0 1 0 16z" fill="currentColor"></path>
+        </svg>
+      </button>
+      <button id="nav-toggle" class="icon-button menu-button" type="button" aria-label="Open menu"
+        aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Welcome banner">
+      <svg class="hero-skyline" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <rect x="0" y="0" width="1200" height="260" fill="url(#sky)"></rect>
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#002147"></stop>
+            <stop offset="1" stop-color="#00346e"></stop>
+          </linearGradient>
+        </defs>
+
+        <g fill="#00152e">
+          <rect x="0" y="190" width="90" height="70"></rect>
+          <rect x="95" y="160" width="60" height="100"></rect>
+          <rect x="165" y="200" width="70" height="60"></rect>
+          <rect x="245" y="150" width="50" height="110"></rect>
+
+          <rect x="330" y="80" width="140" height="180"></rect>
+          <polygon points="330,80 400,20 470,80"></polygon>
+          <rect x="392" y="0" width="16" height="24"></rect>
+          <rect x="490" y="185" width="60" height="75"></rect>
+          <rect x="560" y="150" width="55" height="110"></rect>
+          <rect x="625" y="195" width="80" height="65"></rect>
+          <rect x="715" y="170" width="45" height="90"></rect>
+          <rect x="770" y="205" width="90" height="55"></rect>
+          <rect x="870" y="155" width="60" height="105"></rect>
+          <rect x="940" y="195" width="70" height="65"></rect>
+          <rect x="1020" y="165" width="55" height="95"></rect>
+          <rect x="1085" y="205" width="115" height="55"></rect>
+        </g>
+      </svg>
+      <div class="hero-content">
+        <h1>Where Denton Business Grows</h1>
+        <p>
+          The Denton Chamber of Commerce connects local business owners, entrepreneurs, and
+          the community around the historic Square, and beyond, to help each other thrive.
+        </p>
+        <a class="cta-button" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <div class="home-sections">
+
+      <section class="events-section" aria-labelledby="events-heading">
+        <h2 id="events-heading">Upcoming Events</h2>
+        <ul class="event-list">
+          <li class="event-card">
+            <span class="event-date">Aug 8</span>
+            <div class="event-info">
+              <h3>Business After Hours: Denton County Brewing Co.</h3>
+              <p>Network with fellow members over local craft beer, downtown on the Square.</p>
+            </div>
+          </li>
+          <li class="event-card">
+            <span class="event-date">Aug 21</span>
+            <div class="event-info">
+              <h3>Small Business Growth Workshop</h3>
+              <p>A half-day workshop on marketing and financing for growing businesses.</p>
+            </div>
+          </li>
+          <li class="event-card">
+            <span class="event-date">Sep 12</span>
+            <div class="event-info">
+              <h3>Annual Chamber Golf Tournament</h3>
+              <p>Our biggest fundraiser of the year, benefiting local business scholarships.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="weather-section" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Denton Weather</h2>
+        <div class="weather-current">
+          <img id="weather-icon" class="weather-icon" src="" alt="" width="70" height="70">
+          <div>
+            <p id="weather-temp" class="weather-temp">--&deg;F</p>
+            <p id="weather-desc" class="weather-desc">Loading forecast&hellip;</p>
+          </div>
+        </div>
+        <ul id="forecast-list" class="forecast-list" aria-label="Three day forecast"></ul>
+      </section>
+
+    </div>
+
+    <section class="spotlights-section" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div id="spotlight-grid" class="spotlight-grid" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <p class="footer-title">Denton Chamber of Commerce</p>
+      <p>401 North Elm Street</p>
+      <p>Denton, TX, 76201</p>
+      <p><a href="mailto:accountant@dentonchamber.org">accountant@dentonchamber.org</a></p>
+      <p>(940) 382-9693</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" class="social-icon" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M23 12s0-3.6-.46-5.3a2.9 2.9 0 0 0-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.54.5a2.9 2.9 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.46 5.3a2.9 2.9 0 0 0 2 2c1.64.5 8.54.5 8.54.5s6.9 0 8.54-.5a2.9 2.9 0 0 0 2-2C23 15.6 23 12 23 12zM9.7 15.3V8.7l6 3.3z" />
+        </svg>
+      </a>
+      <a href="#" class="social-icon" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" />
+        </svg>
+      </a>
+      <a href="#" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-3-1.83-3-1.83 0-2.1 1.4-2.1 2.9V21H9z" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD231 Class Project</p>
+      <p>Caleb J. Erickson</p>
+      <p>&copy; <span id="year"></span> Denton Chamber of Commerce</p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
