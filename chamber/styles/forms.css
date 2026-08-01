@@ -1,6 +1,3 @@
-/* Simple page header (no view-controls sibling, so undo the
-   absolute-positioning trick chamber-large.css uses for .page-title) */
-
 @media screen and (min-width: 700px) {
   .page-header--simple {
     display: block;
@@ -12,14 +9,10 @@
   }
 }
 
-/* Join page intro */
-
 .join-intro {
   max-width: 65ch;
   margin: 0 0 1.5rem;
 }
-
-/* Layout: form + membership cards */
 
 .join-layout {
   display: grid;
@@ -27,8 +20,6 @@
   gap: 2rem;
   align-items: start;
 }
-
-/* Form */
 
 .join-form {
   display: grid;
@@ -97,8 +88,6 @@
 .join-form input[type="submit"]:focus-visible {
   background-color: #921031;
 }
-
-/* Membership cards */
 
 .membership-cards {
   display: grid;
@@ -171,8 +160,6 @@
   }
 }
 
-/* Modals */
-
 .benefits-modal {
   max-width: 420px;
   width: 90%;
@@ -224,8 +211,6 @@
 .modal-close:focus-visible {
   background-color: var(--secondary-light);
 }
-
-/* Thank you page */
 
 .thankyou-message {
   max-width: 65ch;
