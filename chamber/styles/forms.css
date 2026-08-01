@@ -1,3 +1,17 @@
+/* Simple page header (no view-controls sibling, so undo the
+   absolute-positioning trick chamber-large.css uses for .page-title) */
+
+@media screen and (min-width: 700px) {
+  .page-header--simple {
+    display: block;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .page-header--simple .page-title {
+    position: static;
+  }
+}
+
 /* Join page intro */
 
 .join-intro {
