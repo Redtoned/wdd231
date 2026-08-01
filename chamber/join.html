@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | Denton Chamber of Commerce</title>
+  <meta name="description"
+    content="Join the Denton Chamber of Commerce. Choose a membership level and submit your application online." />
+  <meta name="author" content="Caleb J. Erickson" />
+  <link rel="icon" type="image/png" href="images/chamberofcommerce.png">
+
+  <meta property="og:title" content="Denton Chamber of Commerce – Join" />
+  <meta property="og:description"
+    content="Choose a membership level and apply to join the Denton Chamber of Commerce today." />
+  <meta property="og:image" content="https://redtoned.github.io/wdd231/chamber/images/chamberofcommerce.png" />
+  <meta property="og:url" content="https://redtoned.github.io/wdd231/chamber/join.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/chamber.css" />
+  <link rel="stylesheet" href="styles/chamber-large.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+
+  <script src="scripts/chamber.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="images/chamberofcommerce.png" alt="Denton Chamber of Commerce logo">
+      <span>Denton Chamber of Commerce</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active" aria-current="page">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+
+    <div class="header-controls">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 0 1 0 16z" fill="currentColor"></path>
+        </svg>
+      </button>
+      <button id="nav-toggle" class="icon-button menu-button" type="button" aria-label="Open menu"
+        aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1 class="page-title">Join the Chamber</h1>
+    </div>
+
+    <p class="join-intro">
+      Ready to grow your business alongside Denton's community of entrepreneurs and owners? Fill out
+      the application below and choose the membership level that's right for your organization. Not
+      sure which level fits? Compare the benefits in the cards to the right (or below, on smaller
+      screens) before you apply.
+    </p>
+
+    <div class="join-layout">
+
+      <form class="join-form" method="get" action="thankyou.html">
+
+        <label for="first-name">
+          First Name
+          <input type="text" id="first-name" name="firstName" title="Your first name" required
+            autocomplete="given-name" placeholder="Jane">
+        </label>
+
+        <label for="last-name">
+          Last Name
+          <input type="text" id="last-name" name="lastName" title="Your last name" required
+            autocomplete="family-name" placeholder="Doe">
+        </label>
+
+        <label for="org-title">
+          Organizational Title
+          <input type="text" id="org-title" name="orgTitle" title="Your title within your organization, letters, hyphens, and spaces only, minimum 7 characters"
+            autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" placeholder="Marketing Director">
+        </label>
+
+        <label for="email">
+          Email Address
+          <input type="email" id="email" name="email" title="Your email address" required
+            autocomplete="email" placeholder="jane.doe@example.com">
+        </label>
+
+        <label for="phone">
+          Mobile Phone Number
+          <input type="tel" id="phone" name="phone" title="Your mobile phone number" required
+            autocomplete="tel" placeholder="(940) 555-0123">
+        </label>
+
+        <label for="org-name">
+          Business/Organization Name
+          <input type="text" id="org-name" name="orgName" title="The name of your business or organization"
+            required autocomplete="organization" placeholder="Acme Co.">
+        </label>
+
+        <label for="membership-level">
+          Membership Level
+          <select id="membership-level" name="membershipLevel" title="Choose a membership level" required>
+            <option value="" disabled selected>Select a level&hellip;</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label for="description" class="full-width">
+          Business/Organization Description
+          <textarea id="description" name="description" title="A short description of your business or organization"
+            rows="5" placeholder="Tell us about what your business does&hellip;"></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <p class="full-width form-submit-row">
+          <input type="submit" value="Submit Application">
+        </p>
+
+      </form>
+
+      <aside class="membership-cards" aria-label="Membership level comparison">
+        <h2 class="visually-hidden">Membership Levels</h2>
+
+        <article class="membership-card level-np">
+          <h3>NP Membership</h3>
+          <p class="tag-line">Free for qualifying non-profit organizations</p>
+          <a href="#modal-np" class="modal-link" data-modal="modal-np">Learn more about benefits</a>
+        </article>
+
+        <article class="membership-card level-bronze">
+          <h3>Bronze Membership</h3>
+          <p class="tag-line">Essential visibility and networking for growing businesses</p>
+          <a href="#modal-bronze" class="modal-link" data-modal="modal-bronze">Learn more about benefits</a>
+        </article>
+
+        <article class="membership-card level-silver">
+          <h3>Silver Membership</h3>
+          <p class="tag-line">Expanded exposure and event discounts</p>
+          <a href="#modal-silver" class="modal-link" data-modal="modal-silver">Learn more about benefits</a>
+        </article>
+
+        <article class="membership-card level-gold">
+          <h3>Gold Membership</h3>
+          <p class="tag-line">Maximum visibility, training, and event perks</p>
+          <a href="#modal-gold" class="modal-link" data-modal="modal-gold">Learn more about benefits</a>
+        </article>
+      </aside>
+
+    </div>
+  </main>
+
+  <dialog id="modal-np" class="benefits-modal">
+    <h2>NP Membership</h2>
+    <p class="modal-price">No Fee</p>
+    <ul>
+      <li>Free listing in the online business directory</li>
+      <li>Access to member-only networking events</li>
+      <li>Monthly community newsletter subscription</li>
+      <li>Eligibility to volunteer on Chamber committees</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="modal-bronze" class="benefits-modal">
+    <h2>Bronze Membership</h2>
+    <p class="modal-price">$150 / year</p>
+    <ul>
+      <li>All NP Membership benefits</li>
+      <li>Standard directory listing with logo</li>
+      <li>One free ticket to the Annual Golf Tournament</li>
+      <li>10% discount on Chamber-hosted event tickets</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="modal-silver" class="benefits-modal">
+    <h2>Silver Membership</h2>
+    <p class="modal-price">$350 / year</p>
+    <ul>
+      <li>All Bronze Membership benefits</li>
+      <li>Eligible for rotating Home Page spotlight placement</li>
+      <li>Two free tickets to the Annual Golf Tournament</li>
+      <li>20% discount on Chamber-hosted event tickets</li>
+      <li>Access to quarterly member training workshops</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="modal-gold" class="benefits-modal">
+    <h2>Gold Membership</h2>
+    <p class="modal-price">$750 / year</p>
+    <ul>
+      <li>All Silver Membership benefits</li>
+      <li>Priority Home Page spotlight placement</li>
+      <li>Four free tickets to the Annual Golf Tournament</li>
+      <li>30% discount on Chamber-hosted event tickets</li>
+      <li>Featured business profile in the monthly newsletter</li>
+      <li>One complimentary Business After Hours host slot per year</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <p class="footer-title">Denton Chamber of Commerce</p>
+      <p>401 North Elm Street</p>
+      <p>Denton, TX, 76201</p>
+      <p><a href="mailto:accountant@dentonchamber.org">accountant@dentonchamber.org</a></p>
+      <p>(940) 382-9693</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" class="social-icon" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M23 12s0-3.6-.46-5.3a2.9 2.9 0 0 0-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.54.5a2.9 2.9 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.46 5.3a2.9 2.9 0 0 0 2 2c1.64.5 8.54.5 8.54.5s6.9 0 8.54-.5a2.9 2.9 0 0 0 2-2C23 15.6 23 12 23 12zM9.7 15.3V8.7l6 3.3z" />
+        </svg>
+      </a>
+      <a href="#" class="social-icon" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" />
+        </svg>
+      </a>
+      <a href="#" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-3-1.83-3-1.83 0-2.1 1.4-2.1 2.9V21H9z" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD231 Class Project</p>
+      <p>Caleb J. Erickson</p>
+      <p>&copy; <span id="year"></span> Denton Chamber of Commerce</p>
+      <p>Last Modification: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
