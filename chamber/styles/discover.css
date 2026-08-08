@@ -1,0 +1,331 @@
+/* ===== Discover page header ===== */
+
+.discover-intro {
+  max-width: 65ch;
+  margin: 0 0 1.5rem;
+}
+
+/* ===== Visit message banner ===== */
+
+.visit-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid var(--card-border);
+  border-left: 5px solid var(--secondary);
+  border-radius: 6px;
+  background-color: var(--secondary-light);
+}
+
+.visit-message p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.visit-message-close {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.visit-message-close:hover,
+.visit-message-close:focus-visible {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.visit-message.is-hidden {
+  display: none;
+}
+
+/* ===== Discover grid: small screens (default, 320-640px) ===== */
+/* One named area per card, stacked in a single column. */
+
+.discover-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+  margin: 2rem 0;
+}
+
+.discover-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+}
+
+.card-c1 { grid-area: c1; }
+.card-c2 { grid-area: c2; }
+.card-c3 { grid-area: c3; }
+.card-c4 { grid-area: c4; }
+.card-c5 { grid-area: c5; }
+.card-c6 { grid-area: c6; }
+.card-c7 { grid-area: c7; }
+.card-c8 { grid-area: c8; }
+
+.discover-card h2 {
+  margin: 0;
+  padding: 0.75rem 1rem 0.25rem;
+  font-size: 1.05rem;
+}
+
+.discover-card figure {
+  margin: 0;
+  background-color: var(--secondary-light);
+  overflow: hidden;
+}
+
+.discover-card figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #444;
+  padding: 0.4rem 1rem 0;
+}
+
+body[data-theme="dark"] .discover-card address {
+  color: #cfcfcf;
+}
+
+.discover-card p {
+  flex: 1;
+  margin: 0.4rem 0 0;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+.discover-card .learn-more-btn {
+  align-self: flex-start;
+  margin: 0.85rem 1rem 1rem;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.discover-card .learn-more-btn:hover,
+.discover-card .learn-more-btn:focus-visible {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+/* Featured (c1) card gets a taller image on every breakpoint */
+.card-c1 figure {
+  aspect-ratio: 3 / 2;
+}
+
+.card-c2 figure,
+.card-c3 figure,
+.card-c4 figure,
+.card-c5 figure,
+.card-c6 figure,
+.card-c7 figure,
+.card-c8 figure {
+  aspect-ratio: 3 / 2;
+}
+
+/* ===== Discover detail modal ===== */
+
+.discover-modal {
+  max-width: 460px;
+  width: 90%;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-family: var(--font-family);
+}
+
+.discover-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.discover-modal h2 {
+  margin: 0 0 0.25rem;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 0.35rem;
+}
+
+.discover-modal address {
+  font-style: normal;
+  display: block;
+  margin: 0.5rem 0 1rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.discover-modal p {
+  margin: 0 0 1.25rem;
+}
+
+.discover-modal .modal-close {
+  font-family: var(--font-family);
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.discover-modal .modal-close:hover,
+.discover-modal .modal-close:focus-visible {
+  background-color: var(--secondary-light);
+}
+
+/* ===== Medium screens (641px - 1024px) ===== */
+/* Two columns. The featured item (c1) spans both columns up top,
+   the remaining six items pair off two-per-row, and the last
+   item (c8) spans both columns at the bottom. This is a distinct
+   arrangement from the small-screen single column, not just an
+   extra column of the same list. */
+
+@media screen and (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c1 c1"
+      "c2 c3"
+      "c4 c5"
+      "c6 c7"
+      "c8 c8";
+  }
+
+  .card-c1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .card-c1 figure {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .card-c1 .discover-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-c8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  .card-c8 figure {
+    aspect-ratio: auto;
+    height: 100%;
+    order: 2;
+  }
+
+  .card-c8 .discover-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hover effect on gallery images — medium screens and up only */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card figure:hover img,
+  .discover-card figure:focus-within img {
+    transform: scale(1.07);
+    filter: brightness(1.08) saturate(1.15);
+  }
+}
+
+/* ===== Large screens (1025px and above) ===== */
+/* Four columns in a magazine-style layout: the featured item (c1)
+   becomes a 2x2 block, four items fill the remaining cells beside
+   it, and the final two items span two columns each along the
+   bottom row. Distinct from the medium arrangement, not simply
+   more columns of the same pairs. */
+
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(170px, auto) minmax(170px, auto) minmax(220px, auto);
+    grid-template-areas:
+      "c1 c1 c2 c3"
+      "c1 c1 c4 c5"
+      "c6 c7 c8 c8";
+  }
+
+  .card-c1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-c1 figure {
+    flex: 1;
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .card-c8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .card-c8 figure {
+    order: 2;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    align-self: center;
+  }
+
+  .card-c2 figure,
+  .card-c3 figure,
+  .card-c4 figure,
+  .card-c5 figure {
+    aspect-ratio: auto;
+    height: 45%;
+  }
+
+  .card-c2,
+  .card-c3,
+  .card-c4,
+  .card-c5 {
+    display: flex;
+    flex-direction: column;
+  }
+}
