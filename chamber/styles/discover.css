@@ -1,5 +1,20 @@
 /* ===== Discover page header ===== */
 
+/* chamber-large.css makes .page-title position:absolute at 700px+ so it
+   can share a row with things like the directory grid/list toggle. This
+   page's header only has a title, so cancel that out here (join.html and
+   thankyou.html do the same thing via forms.css). */
+@media screen and (min-width: 700px) {
+  .page-header--simple {
+    display: block;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .page-header--simple .page-title {
+    position: static;
+  }
+}
+
 .discover-intro {
   max-width: 65ch;
   margin: 0 0 1.5rem;
