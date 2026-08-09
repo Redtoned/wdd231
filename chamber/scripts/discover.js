@@ -65,8 +65,6 @@ modal.addEventListener("click", (event) => {
 
 renderCards();
 
-/* ===== Last visit message (localStorage) ===== */
-
 const VISIT_KEY = "dentonChamberLastVisit";
 const visitMessageEl = document.getElementById("visit-message");
 const visitMessageText = document.getElementById("visit-message-text");
