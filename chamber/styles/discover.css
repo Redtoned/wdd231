@@ -1,3 +1,9 @@
+/* ===== Discover page header ===== */
+
+/* chamber-large.css makes .page-title position:absolute at 700px+ so it
+   can share a row with things like the directory grid/list toggle. This
+   page's header only has a title, so cancel that out here (join.html and
+   thankyou.html do the same thing via forms.css). */
 @media screen and (min-width: 700px) {
   .page-header--simple {
     display: block;
@@ -13,6 +19,8 @@
   max-width: 65ch;
   margin: 0 0 1.5rem;
 }
+
+/* ===== Visit message banner ===== */
 
 .visit-message {
   display: flex;
@@ -55,6 +63,9 @@
   display: none;
 }
 
+/* ===== Discover grid: small screens (default, 320-640px) ===== */
+/* One named area per card, stacked in a single column. */
+
 .discover-grid {
   display: grid;
   gap: 1.25rem;
@@ -69,6 +80,11 @@
     "c7"
     "c8";
   margin: 2rem 0;
+  /* Reserve roughly the space the 8 cards will occupy once the JSON module
+     loads and renders them, so mounting the cards doesn't shift everything
+     below the grid (the visually-hidden <h2> is the grid's only child until
+     JS runs). */
+  min-height: 2700px;
 }
 
 .discover-card {
@@ -80,37 +96,14 @@
   background-color: var(--card-bg);
 }
 
-.card-c1 {
-  grid-area: c1;
-}
-
-.card-c2 {
-  grid-area: c2;
-}
-
-.card-c3 {
-  grid-area: c3;
-}
-
-.card-c4 {
-  grid-area: c4;
-}
-
-.card-c5 {
-  grid-area: c5;
-}
-
-.card-c6 {
-  grid-area: c6;
-}
-
-.card-c7 {
-  grid-area: c7;
-}
-
-.card-c8 {
-  grid-area: c8;
-}
+.card-c1 { grid-area: c1; }
+.card-c2 { grid-area: c2; }
+.card-c3 { grid-area: c3; }
+.card-c4 { grid-area: c4; }
+.card-c5 { grid-area: c5; }
+.card-c6 { grid-area: c6; }
+.card-c7 { grid-area: c7; }
+.card-c8 { grid-area: c8; }
 
 .discover-card h2 {
   margin: 0;
@@ -170,6 +163,7 @@ body[data-theme="dark"] .discover-card address {
   color: #ffffff;
 }
 
+/* Featured (c1) card gets a taller image on every breakpoint */
 .card-c1 figure {
   aspect-ratio: 3 / 2;
 }
@@ -183,6 +177,8 @@ body[data-theme="dark"] .discover-card address {
 .card-c8 figure {
   aspect-ratio: 3 / 2;
 }
+
+/* ===== Discover detail modal ===== */
 
 .discover-modal {
   max-width: 460px;
@@ -233,6 +229,13 @@ body[data-theme="dark"] .discover-card address {
   background-color: var(--secondary-light);
 }
 
+/* ===== Medium screens (641px - 1024px) ===== */
+/* Two columns. The featured item (c1) spans both columns up top,
+   the remaining six items pair off two-per-row, and the last
+   item (c8) spans both columns at the bottom. This is a distinct
+   arrangement from the small-screen single column, not just an
+   extra column of the same list. */
+
 @media screen and (min-width: 641px) {
   .discover-grid {
     grid-template-columns: 1fr 1fr;
@@ -242,6 +245,7 @@ body[data-theme="dark"] .discover-card address {
       "c4 c5"
       "c6 c7"
       "c8 c8";
+    min-height: 1500px;
   }
 
   .card-c1 {
@@ -277,6 +281,7 @@ body[data-theme="dark"] .discover-card address {
     flex-direction: column;
   }
 
+  /* Hover effect on gallery images — medium screens and up only */
   .discover-card figure img {
     transition: transform 0.35s ease, filter 0.35s ease;
   }
@@ -288,6 +293,13 @@ body[data-theme="dark"] .discover-card address {
   }
 }
 
+/* ===== Large screens (1025px and above) ===== */
+/* Four columns in a magazine-style layout: the featured item (c1)
+   becomes a 2x2 block, four items fill the remaining cells beside
+   it, and the final two items span two columns each along the
+   bottom row. Distinct from the medium arrangement, not simply
+   more columns of the same pairs. */
+
 @media screen and (min-width: 1025px) {
   .discover-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -296,6 +308,7 @@ body[data-theme="dark"] .discover-card address {
       "c1 c1 c2 c3"
       "c1 c1 c4 c5"
       "c6 c7 c8 c8";
+    min-height: 850px;
   }
 
   .card-c1 {

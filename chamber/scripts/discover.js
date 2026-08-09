@@ -11,9 +11,17 @@ function buildCard(item) {
   const article = document.createElement("article");
   article.className = `discover-card card-${item.area}`;
 
+  // The c1 card is the featured, above-the-fold item (and the page's LCP
+  // element, already warmed by a <link rel="preload"> in the head) so it
+  // loads eagerly at high priority. Every other card image lazy-loads.
+  const isFeatured = item.area === "c1";
+  const loadingAttr = isFeatured ? "eager" : "lazy";
+  const priorityAttr = isFeatured ? ' fetchpriority="high"' : "";
+
   article.innerHTML = `
     <figure>
-      <img src="images/discover/${item.image}" alt="${item.name}" loading="lazy">
+      <img src="images/discover/${item.image}" alt="${item.name}" width="300" height="200"
+           loading="${loadingAttr}"${priorityAttr}>
     </figure>
     <div class="discover-card-body">
       <h2>${item.name}</h2>
@@ -64,6 +72,8 @@ modal.addEventListener("click", (event) => {
 });
 
 renderCards();
+
+/* ===== Last visit message (localStorage) ===== */
 
 const VISIT_KEY = "dentonChamberLastVisit";
 const visitMessageEl = document.getElementById("visit-message");

@@ -19,11 +19,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+
+  <!-- Load the font stylesheet without blocking rendering: fetch it in the
+       background (media="print" is ignored for render-blocking purposes),
+       then swap it to "all" once it's ready. The noscript tag covers
+       browsers with JS disabled. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    media="print" onload="this.media='all'; this.onload=null;">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  </noscript>
+
+  <!-- The first (featured) card image is the page's LCP element; preload it
+       and give it priority so it doesn't wait behind the JS module import. -->
+  <link rel="preload" as="image" href="images/discover/courthouse-museum.webp" fetchpriority="high">
+  <!-- Warm the module script and its JSON data in parallel with everything else,
+       instead of waiting for the browser to parse the script before either fetch starts. -->
+  <link rel="modulepreload" href="scripts/discover.js">
+  <link rel="preload" href="data/discover.mjs" as="fetch" crossorigin>
 
   <link rel="stylesheet" href="styles/chamber.css" />
-  <link rel="stylesheet" href="styles/chamber-large.css" />
+  <!-- chamber-large.css only contains rules inside a min-width:700px media query,
+       so it doesn't need to block first paint below that width. -->
+  <link rel="stylesheet" href="styles/chamber-large.css" media="(min-width: 700px)" />
   <link rel="stylesheet" href="styles/discover.css" />
 
   <script src="scripts/chamber.js" defer></script>
@@ -34,7 +56,7 @@
 
   <header class="site-header">
     <a class="brand" href="index.html">
-      <img class="brand-icon" src="images/chamberofcommerce.png" alt="Denton Chamber of Commerce logo">
+      <img class="brand-icon" src="images/chamberofcommerce.png" alt="Denton Chamber of Commerce logo" width="34" height="34">
       <span>Denton Chamber of Commerce</span>
     </a>
 
