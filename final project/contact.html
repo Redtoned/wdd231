@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation — Meridian Wealth Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/final.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .info-item {
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .info-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-item p {
+      margin: 4px 0 0;
+    }
+
+    .info-label {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    form {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      padding: 40px;
+      border-radius: var(--radius);
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 7px;
+    }
+
+    .field .hint {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      font-weight: 400;
+      margin-left: 6px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 14.5px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: border-color .15s ease;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--navy-mid);
+      outline: none;
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .error-msg {
+      font-size: 12.5px;
+      color: #B3413B;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .field.invalid input,
+    .field.invalid select {
+      border-color: #B3413B;
+    }
+
+    .field.invalid .error-msg {
+      display: block;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .radio-option input {
+      width: auto;
+      accent-color: var(--navy-deep);
+    }
+
+    #success-panel {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    @media (max-width: 860px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site">
+    <div class="nav-row">
+      <a href="index.html" class="brand">Meridian <small>Wealth Advisory</small></a>
+      <nav class="primary">
+        <a href="index.html">Overview</a>
+        <a href="services.html">What We Cover</a>
+        <a href="contact.html" class="active">Book a Consultation</a>
+        <a href="contact.html" class="nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="padding-top:80px; padding-bottom:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Book a Free Consultation</p>
+      <h1 style="max-width:760px;">Tell us a bit about yourself, and we'll reach out to schedule a time.</h1>
+      <p class="lede" style="margin-top:20px;">
+        This isn't a commitment to anything — just a request to talk. A member of
+        our team will follow up within one business day using whichever method
+        you prefer below.
+      </p>
+    </div>
+  </section>
+
+  <div class="ledger"></div>
+
+  <section>
+    <div class="wrap contact-grid">
+
+      <!-- LEFT: INFO -->
+      <div>
+        <div class="info-item">
+          <div class="info-label">Phone</div>
+          <p><a href="tel:+18015550142">(801) 555-0142</a></p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Email</div>
+          <p><a href="mailto:hello@meridianwealth.example">hello@meridianwealth.example</a></p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Office</div>
+          <p>412 Aspen Ridge Way, Suite 210<br>Syracuse, UT 84075</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Hours</div>
+          <p>Monday – Friday, 9:00 AM – 5:30 PM MT</p>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Response Time</div>
+          <p>We follow up on every request within one business day.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div>
+        <form id="consult-form" novalidate>
+
+          <div class="field-row">
+            <div class="field" id="field-firstname">
+              <label for="firstname">First name</label>
+              <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+              <div class="error-msg">Enter your first name.</div>
+            </div>
+            <div class="field" id="field-lastname">
+              <label for="lastname">Last name</label>
+              <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+              <div class="error-msg">Enter your last name.</div>
+            </div>
+          </div>
+
+          <div class="field" id="field-email">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <div class="error-msg">Enter a valid email address.</div>
+          </div>
+
+          <div class="field" id="field-phone">
+            <label for="phone">Phone number <span class="hint">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+            <div class="error-msg">Enter a valid phone number.</div>
+          </div>
+
+          <div class="field" id="field-contact-method">
+            <label>Preferred contact method</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="contact-method" value="email" checked> Email</label>
+              <label class="radio-option"><input type="radio" name="contact-method" value="phone"> Phone call</label>
+              <label class="radio-option"><input type="radio" name="contact-method" value="text"> Text message</label>
+            </div>
+          </div>
+
+          <div class="field" id="field-topic">
+            <label for="topic">What would you like to discuss? <span class="hint">(optional)</span></label>
+            <select id="topic" name="topic">
+              <option value="">Not sure yet — that's fine</option>
+              <option value="budgeting">Budgeting &amp; Cash Flow</option>
+              <option value="debt">Debt Strategy</option>
+              <option value="investment">Investment Strategy</option>
+              <option value="retirement">Retirement Planning</option>
+              <option value="tax">Tax-Efficient Planning</option>
+              <option value="estate">Estate &amp; Legacy Planning</option>
+            </select>
+          </div>
+
+          <div class="field" id="field-message">
+            <label for="message">Anything else we should know? <span class="hint">(optional)</span></label>
+            <textarea id="message" name="message"
+              placeholder="A little context helps us match you with the right advisor."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">
+            Request a Consultation
+          </button>
+          <p style="font-size:12px; color:var(--ink-soft); margin-top:14px; margin-bottom:0; text-align:center;">
+            By submitting, you agree to be contacted by Meridian Wealth Advisory. No spam, ever.
+          </p>
+        </form>
+
+        <div id="success-panel">
+          <h2 style="margin-bottom:14px;">Request received.</h2>
+          <p style="max-width:44ch; margin:0 auto;">
+            Thanks — a member of our team will reach out within one business day
+            using the contact method you selected.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div>
+        <h4>Meridian Wealth Advisory</h4>
+        <a href="index.html">Overview</a>
+        <a href="services.html">What We Cover</a>
+        <a href="contact.html">Book a Consultation</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+18015550142">(801) 555-0142</a>
+        <a href="mailto:hello@meridianwealth.example">hello@meridianwealth.example</a>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <a href="#">412 Aspen Ridge Way, Suite 210</a>
+        <a href="#">Syracuse, UT 84075</a>
+      </div>
+    </div>
+    <div class="foot-bottom wrap">
+      © 2026 Meridian Wealth Advisory. Placeholder content for demonstration purposes. Not affiliated with any real
+      financial institution.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
