@@ -5,152 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Consultation — Meridian Wealth Advisory</title>
+  <meta name="description"
+    content="Request a free consultation with Meridian Wealth Advisory and tell us how you'd like our team to follow up.">
+  <meta name="author" content="[Your Name]">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Book a Free Consultation — Meridian Wealth">
+  <meta property="og:description"
+    content="Book a free, no-obligation consultation with Meridian Wealth Advisory — we'll follow up within one business day.">
+  <meta property="og:image" content="https://meridianwealth.example/images/og-cover.jpg">
+  <meta property="og:url" content="https://meridianwealth.example/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/final.css">
-  <style>
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    .info-item {
-      padding: 20px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .info-item:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .info-item p {
-      margin: 4px 0 0;
-    }
-
-    .info-label {
-      font-family: var(--font-mono);
-      font-size: 11.5px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    form {
-      background: var(--paper-raised);
-      border: 1px solid var(--line);
-      padding: 40px;
-      border-radius: var(--radius);
-    }
-
-    .field {
-      margin-bottom: 22px;
-    }
-
-    .field label {
-      display: block;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--navy-deep);
-      margin-bottom: 7px;
-    }
-
-    .field .hint {
-      font-size: 12.5px;
-      color: var(--ink-soft);
-      font-weight: 400;
-      margin-left: 6px;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      padding: 12px 14px;
-      font-family: var(--font-body);
-      font-size: 14.5px;
-      color: var(--ink);
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      transition: border-color .15s ease;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: var(--navy-mid);
-      outline: none;
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .error-msg {
-      font-size: 12.5px;
-      color: #B3413B;
-      margin-top: 6px;
-      display: none;
-    }
-
-    .field.invalid input,
-    .field.invalid select {
-      border-color: #B3413B;
-    }
-
-    .field.invalid .error-msg {
-      display: block;
-    }
-
-    .radio-group {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .radio-option {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--ink);
-    }
-
-    .radio-option input {
-      width: auto;
-      accent-color: var(--navy-deep);
-    }
-
-    #success-panel {
-      display: none;
-      text-align: center;
-      padding: 60px 40px;
-      background: var(--paper-raised);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    @media (max-width: 860px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .field-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -158,7 +26,13 @@
   <header class="site">
     <div class="nav-row">
       <a href="index.html" class="brand">Meridian <small>Wealth Advisory</small></a>
-      <nav class="primary">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="primary" id="primary-nav">
         <a href="index.html">Overview</a>
         <a href="services.html">What We Cover</a>
         <a href="contact.html" class="active">Book a Consultation</a>
@@ -167,11 +41,13 @@
     </div>
   </header>
 
-  <section style="padding-top:80px; padding-bottom:56px;">
+  <main>
+
+  <section class="page-intro">
     <div class="wrap">
       <p class="eyebrow">Book a Free Consultation</p>
-      <h1 style="max-width:760px;">Tell us a bit about yourself, and we'll reach out to schedule a time.</h1>
-      <p class="lede" style="margin-top:20px;">
+      <h1 class="max-w-760">Tell us a bit about yourself, and we'll reach out to schedule a time.</h1>
+      <p class="lede mt-20">
         This isn't a commitment to anything — just a request to talk. A member of
         our team will follow up within one business day using whichever method
         you prefer below.
@@ -184,6 +60,7 @@
   <section>
     <div class="wrap contact-grid">
 
+      <!-- LEFT: INFO -->
       <div>
         <div class="info-item">
           <div class="info-label">Phone</div>
@@ -264,17 +141,17 @@
               placeholder="A little context helps us match you with the right advisor."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">
+          <button type="submit" class="btn btn-primary btn-block">
             Request a Consultation
           </button>
-          <p style="font-size:12px; color:var(--ink-soft); margin-top:14px; margin-bottom:0; text-align:center;">
+          <p class="form-disclaimer">
             By submitting, you agree to be contacted by Meridian Wealth Advisory. No spam, ever.
           </p>
         </form>
 
         <div id="success-panel">
-          <h2 style="margin-bottom:14px;">Request received.</h2>
-          <p style="max-width:44ch; margin:0 auto;">
+          <h2>Request received.</h2>
+          <p>
             Thanks — a member of our team will reach out within one business day
             using the contact method you selected.
           </p>
@@ -283,6 +160,8 @@
 
     </div>
   </section>
+
+  </main>
 
   <footer class="site">
     <div class="wrap">

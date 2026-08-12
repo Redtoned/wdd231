@@ -5,6 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meridian Wealth Advisory — Free Financial Consultations</title>
+  <meta name="description"
+    content="Meridian Wealth Advisory offers free, no-obligation financial consultations covering budgeting, investing, retirement, and estate planning.">
+  <meta name="author" content="[Your Name]">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Meridian Wealth Advisory — Free Consultations">
+  <meta property="og:description"
+    content="Get a free, no-pressure consultation with a fee-transparent, fiduciary financial advisor at Meridian Wealth Advisory.">
+  <meta property="og:image" content="https://meridianwealth.example/images/og-cover.jpg">
+  <meta property="og:url" content="https://meridianwealth.example/index.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
@@ -17,7 +26,13 @@
   <header class="site">
     <div class="nav-row">
       <a href="index.html" class="brand">Meridian <small>Wealth Advisory</small></a>
-      <nav class="primary">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="primary" id="primary-nav">
         <a href="index.html" class="active">Overview</a>
         <a href="services.html">What We Cover</a>
         <a href="contact.html">Book a Consultation</a>
@@ -26,16 +41,19 @@
     </div>
   </header>
 
-  <section style="padding-top:96px; padding-bottom:80px;">
+  <main>
+
+  <!-- HERO -->
+  <section class="hero-section">
     <div class="wrap">
       <p class="eyebrow">Free, No-Obligation Consultations</p>
       <h1>A clear-eyed look at your money,<br>from people who do this for a living.</h1>
-      <p class="lede" style="margin-top:22px;">
+      <p class="lede mt-22">
         Meridian Wealth Advisory offers every new client a complimentary consultation —
         no pressure, no product pitch, just a straightforward conversation about where
         you stand financially and where you'd like to go.
       </p>
-      <div style="display:flex; gap:16px; margin-top:32px; flex-wrap:wrap;">
+      <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
         <a href="services.html" class="btn btn-ghost">See What We Cover</a>
       </div>
@@ -44,8 +62,9 @@
 
   <div class="ledger"></div>
 
+  <!-- MISSION -->
   <section>
-    <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:64px; align-items:start;">
+    <div class="wrap mission-grid">
       <div>
         <p class="eyebrow">Our Mission</p>
         <h2>Financial guidance shouldn't be a luxury reserved for the wealthy.</h2>
@@ -70,21 +89,19 @@
   <div class="ledger gold"></div>
 
   <!-- STATS STRIP -->
-  <section class="tight"
-    style="background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-    <div class="wrap" style="display:grid; grid-template-columns: repeat(3,1fr); gap:40px;">
+  <section class="tight raised-band">
+    <div class="wrap stats-grid">
       <div>
-        <div style="font-family:var(--font-display); font-size:36px; color:var(--navy-deep); font-weight:600;">30–45 min
-        </div>
-        <p style="margin:6px 0 0;">Typical length of a first consultation, in person or by video call.</p>
+        <div class="stat-value">30–45 min</div>
+        <p class="stat-caption">Typical length of a first consultation, in person or by video call.</p>
       </div>
       <div>
-        <div style="font-family:var(--font-display); font-size:36px; color:var(--navy-deep); font-weight:600;">$0</div>
-        <p style="margin:6px 0 0;">Cost of the initial consultation — always, regardless of what you decide after.</p>
+        <div class="stat-value">$0</div>
+        <p class="stat-caption">Cost of the initial consultation — always, regardless of what you decide after.</p>
       </div>
       <div>
-        <div style="font-family:var(--font-display); font-size:36px; color:var(--navy-deep); font-weight:600;">6</div>
-        <p style="margin:6px 0 0;">Core planning areas our advisors cover, from budgeting to estate planning.</p>
+        <div class="stat-value">6</div>
+        <p class="stat-caption">Core planning areas our advisors cover, from budgeting to estate planning.</p>
       </div>
     </div>
   </section>
@@ -97,40 +114,28 @@
         <h2>Three advisors, three specialties — matched to what you need.</h2>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:28px;">
+      <div class="advisors-grid">
 
         <div class="card">
-          <div
-            style="width:56px; height:56px; border-radius:50%; background:var(--navy-deep); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; margin-bottom:18px;">
-            DR</div>
+          <div class="advisor-avatar">DR</div>
           <h3>Dana Reyes, CFP®</h3>
-          <p
-            style="font-family:var(--font-mono); font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">
-            Retirement &amp; Investment Planning</p>
+          <p class="advisor-role">Retirement &amp; Investment Planning</p>
           <p>Fourteen years advising individuals and couples on long-horizon planning — from first 401(k) to drawdown
             strategy in retirement.</p>
         </div>
 
         <div class="card">
-          <div
-            style="width:56px; height:56px; border-radius:50%; background:var(--navy-deep); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; margin-bottom:18px;">
-            JT</div>
+          <div class="advisor-avatar">JT</div>
           <h3>Jordan Tate, CFP®</h3>
-          <p
-            style="font-family:var(--font-mono); font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">
-            Budgeting, Debt &amp; Early Career</p>
+          <p class="advisor-role">Budgeting, Debt &amp; Early Career</p>
           <p>Works primarily with clients building their financial foundation — paying down debt, budgeting with
             intention, and starting to invest.</p>
         </div>
 
         <div class="card">
-          <div
-            style="width:56px; height:56px; border-radius:50%; background:var(--navy-deep); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:18px; margin-bottom:18px;">
-            PN</div>
+          <div class="advisor-avatar">PN</div>
           <h3>Priya Nandan, CFP®, EA</h3>
-          <p
-            style="font-family:var(--font-mono); font-size:11.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">
-            Tax Strategy &amp; Estate Planning</p>
+          <p class="advisor-role">Tax Strategy &amp; Estate Planning</p>
           <p>Former tax preparer turned advisor, focused on tax-efficient planning, estate structuring, and generational
             wealth transfer.</p>
         </div>
@@ -142,16 +147,17 @@
   <div class="ledger"></div>
 
   <!-- CTA BAND -->
-  <section style="background:var(--navy-deep); color:#fff;">
-    <div class="wrap"
-      style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
+  <section class="cta-band">
+    <div class="wrap cta-row">
       <div>
-        <h2 style="color:#fff; max-width:520px;">Ready to talk through your finances with someone who isn't guessing?
+        <h2 class="cta-heading">Ready to talk through your finances with someone who isn't guessing?
         </h2>
       </div>
       <a href="contact.html" class="btn btn-gold">Request a Consultation</a>
     </div>
   </section>
+
+  </main>
 
   <footer class="site">
     <div class="wrap">
@@ -178,6 +184,7 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

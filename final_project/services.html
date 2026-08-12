@@ -5,63 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What We Cover — Meridian Wealth Advisory</title>
+  <meta name="description"
+    content="See the six financial planning areas Meridian Wealth Advisory covers, from budgeting and debt to retirement and estate planning.">
+  <meta name="author" content="[Your Name]">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="What We Cover — Meridian Wealth Advisory">
+  <meta property="og:description"
+    content="From budgeting to estate planning, explore every topic your Meridian Wealth Advisory consultation can cover.">
+  <meta property="og:image" content="https://meridianwealth.example/images/og-cover.jpg">
+  <meta property="og:url" content="https://meridianwealth.example/services.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/final.css">
-  <style>
-    .topic-list {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .topic-row {
-      display: grid;
-      grid-template-columns: 90px 1fr 1.3fr;
-      gap: 32px;
-      padding: 34px 0;
-      border-top: 1px solid var(--line);
-      align-items: start;
-    }
-
-    .topic-row:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topic-num {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--gold);
-      letter-spacing: 1px;
-      padding-top: 4px;
-    }
-
-    .expect-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .expect-step {
-      border-top: 2px solid var(--navy-deep);
-      padding-top: 16px;
-    }
-
-    @media (max-width: 860px) {
-      .topic-row {
-        grid-template-columns: 50px 1fr;
-      }
-
-      .topic-row>div:nth-child(3) {
-        grid-column: 1 / -1;
-      }
-
-      .expect-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -69,7 +26,13 @@
   <header class="site">
     <div class="nav-row">
       <a href="index.html" class="brand">Meridian <small>Wealth Advisory</small></a>
-      <nav class="primary">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="primary" id="primary-nav">
         <a href="index.html">Overview</a>
         <a href="services.html" class="active">What We Cover</a>
         <a href="contact.html">Book a Consultation</a>
@@ -78,11 +41,13 @@
     </div>
   </header>
 
-  <section style="padding-top:80px; padding-bottom:56px;">
+  <main>
+
+  <section class="page-intro">
     <div class="wrap">
       <p class="eyebrow">Topics We Cover</p>
-      <h1 style="max-width:820px;">Six areas of planning. One conversation to figure out which ones matter to you.</h1>
-      <p class="lede" style="margin-top:20px;">
+      <h1 class="max-w-820">Six areas of planning. One conversation to figure out which ones matter to you.</h1>
+      <p class="lede mt-20">
         You don't need to know which of these applies to you before you book —
         that's part of what the first meeting is for. Here's the full range our
         advisors work in.
@@ -173,8 +138,8 @@
 
   <div class="ledger gold"></div>
 
-  <section
-    style="background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <!-- WHAT TO EXPECT -->
+  <section class="raised-band">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">What To Expect</p>
@@ -183,39 +148,41 @@
 
       <div class="expect-grid">
         <div class="expect-step">
-          <p style="font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-bottom:8px;">BEFORE</p>
-          <h3 style="font-size:17px;">A short intake form</h3>
+          <p class="expect-label">BEFORE</p>
+          <h3>A short intake form</h3>
           <p>Tell us a little about your situation and what's on your mind — five minutes, nothing binding.</p>
         </div>
         <div class="expect-step">
-          <p style="font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-bottom:8px;">DURING</p>
-          <h3 style="font-size:17px;">An open conversation</h3>
+          <p class="expect-label">DURING</p>
+          <h3>An open conversation</h3>
           <p>Your advisor asks questions, listens, and starts sketching what a plan could look like — no scripts.</p>
         </div>
         <div class="expect-step">
-          <p style="font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-bottom:8px;">AFTER</p>
-          <h3 style="font-size:17px;">A written summary</h3>
+          <p class="expect-label">AFTER</p>
+          <h3>A written summary</h3>
           <p>You'll get a short recap by email with anything you discussed and any suggested next steps.</p>
         </div>
         <div class="expect-step">
-          <p style="font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); margin-bottom:8px;">NEXT</p>
-          <h3 style="font-size:17px;">Your call, no pressure</h3>
+          <p class="expect-label">NEXT</p>
+          <h3>Your call, no pressure</h3>
           <p>Work with us further, take the summary elsewhere, or do nothing at all. Genuinely no obligation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="background:var(--navy-deep); color:#fff;">
-    <div class="wrap"
-      style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap cta-row">
       <div>
-        <h2 style="color:#fff; max-width:520px;">Not sure which of these fits your situation? That's a fine reason to
+        <h2 class="cta-heading">Not sure which of these fits your situation? That's a fine reason to
           book.</h2>
       </div>
       <a href="contact.html" class="btn btn-gold">Request a Consultation</a>
     </div>
   </section>
+
+  </main>
 
   <footer class="site">
     <div class="wrap">
@@ -242,6 +209,7 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
