@@ -6,7 +6,8 @@
   --ink: #1E2328;
   --ink-soft: #565F6B;
   --line: #D8DCE2;
-  --gold: #E0793A;
+  --gold: #A84E1A;
+  --gold-on-dark: #F0A35A;
   --gold-soft: #F7DDC9;
 
   --max-w: 1120px;
@@ -100,7 +101,7 @@ header.site {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 1.5px;
-  color: var(--gold);
+  color: var(--gold-on-dark);
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -135,11 +136,11 @@ nav.primary a.active::after {
   right: 0;
   bottom: -2px;
   height: 1px;
-  background: var(--gold);
+  background: var(--gold-on-dark);
 }
 
 .nav-cta {
-  background: var(--gold);
+  background: var(--gold-on-dark);
   color: var(--navy-deep) !important;
   padding: 9px 18px;
   font-weight: 600;
@@ -181,44 +182,7 @@ nav.primary a.active::after {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 760px) {
-  .nav-row {
-    position: relative;
-  }
 
-  .nav-toggle {
-    display: flex;
-  }
-
-  nav.primary {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    background: var(--navy-deep);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 8px 32px 20px;
-    z-index: 20;
-  }
-
-  nav.primary.open {
-    display: flex;
-  }
-
-  nav.primary a {
-    width: 100%;
-    padding: 12px 0;
-  }
-
-  .nav-cta {
-    display: inline-flex;
-    margin-top: 8px;
-  }
-}
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -275,7 +239,7 @@ p {
   max-width: 62ch;
 }
 
-.btn {
+.action-button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -290,32 +254,32 @@ p {
   transition: all .18s ease;
 }
 
-.btn-primary {
+.action-button-primary {
   background: var(--navy-deep);
   color: #fff;
 }
 
-.btn-primary:hover {
+.action-button-primary:hover {
   background: var(--navy-mid);
 }
 
-.btn-ghost {
+.action-button-ghost {
   background: transparent;
   border-color: var(--navy-deep);
   color: var(--navy-deep);
 }
 
-.btn-ghost:hover {
+.action-button-ghost:hover {
   background: var(--navy-deep);
   color: #fff;
 }
 
-.btn-gold {
-  background: var(--gold);
+.action-button-gold {
+  background: var(--gold-on-dark);
   color: var(--navy-deep);
 }
 
-.btn-gold:hover {
+.action-button-gold:hover {
   opacity: .9;
 }
 
@@ -353,7 +317,7 @@ footer.site .wrap {
   gap: 32px;
 }
 
-footer.site h4 {
+footer.site h2 {
   color: #fff;
   font-family: var(--font-display);
   font-size: 16px;
@@ -370,7 +334,7 @@ footer.site a {
 }
 
 footer.site a:hover {
-  color: var(--gold);
+  color: var(--gold-on-dark);
 }
 
 .foot-bottom {
@@ -393,16 +357,7 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
 
-  html {
-    scroll-behavior: auto;
-  }
-}
 
 .mt-14 {
   margin-top: 14px;
@@ -578,19 +533,7 @@ select:focus-visible {
   font-size: 17px;
 }
 
-@media (max-width: 860px) {
-  .topic-row {
-    grid-template-columns: 50px 1fr;
-  }
 
-  .topic-row>div:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
-  .expect-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .contact-grid {
   display: grid;
@@ -713,7 +656,7 @@ select:focus-visible {
   accent-color: var(--navy-deep);
 }
 
-.btn-block {
+.action-button-block {
   width: 100%;
   justify-content: center;
   padding: 14px;
@@ -745,12 +688,15 @@ select:focus-visible {
   margin: 0 auto;
 }
 
-@media (max-width: 860px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .field-row {
-    grid-template-columns: 1fr;
-  }
+/* Accessible headings that remain available to screen readers without changing the visual layout. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
