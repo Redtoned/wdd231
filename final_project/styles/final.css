@@ -9,10 +9,6 @@
   --gold: #E0793A;
   --gold-soft: #F7DDC9;
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-
   --max-w: 1120px;
   --radius: 2px;
 }
